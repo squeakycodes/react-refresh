@@ -1,12 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import FilterableProductTable from './components/FilterableProductTable'
-import MockProducts from "./assets/mockData.json"
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import FilterableProductTable from "./components/FilterableProductTable";
+import MockProducts from "./assets/mockData.json";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -19,9 +17,9 @@ function App() {
         </a>
       </div>
       <h1>Parent State Test</h1>
-      <FilterableProductTable products={MockProducts}/>
+      <FilterableProductTable products={MockProducts} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
