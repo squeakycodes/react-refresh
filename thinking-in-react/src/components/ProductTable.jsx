@@ -1,5 +1,3 @@
-import SearchBar from "./SearchBar"
-
 function ProductRow({product}) {
   const name = product.stocked ? product.name : <span style={{ color: 'red' }}>{product.name}</span>
 
@@ -26,7 +24,13 @@ function ProductCategory({ category, products }) {
 }
 
 
-function ProductTable({ products, search }) {
+function ProductTable({ products, search, filterText, showStockedOnly }) {
+  if(filterText) {
+    products = products.filter((product) => product.name.toLowerCase().includes(filterText.toLowerCase()))
+  }
+  if(showStockedOnly) {
+    products = products.filter((product) => product.stocked)
+  }
   const categories = new Set(products.map(product => product.category))
   const categoryComponents = []
 
