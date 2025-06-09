@@ -1,8 +1,8 @@
 function SearchBar({
   filterText,
   showStockedOnly,
-  onFilterTextChange,
-  onShowStockedOnlyChange,
+  setFilterText,
+  setShowStockedOnly,
 }) {
   return (
     <>
@@ -11,7 +11,7 @@ function SearchBar({
         <input
           name="SearchBar"
           value={filterText}
-          onChange={(e) => onFilterTextChange(e.target.value)}
+          onChange={(e) => setFilterText(e.target.value)}
         />
       </label>
       <br />
@@ -21,7 +21,7 @@ function SearchBar({
           type="checkbox"
           name="productsInStockCheckbox"
           checked={showStockedOnly}
-          onChange={(e) => onShowStockedOnlyChange(e.target.checked)}
+          onChange={(e) => setShowStockedOnly(e.target.checked)}
         />
       </label>
     </>

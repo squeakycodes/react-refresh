@@ -10,8 +10,8 @@ function FilterableProductTable({ products }) {
       <SearchBar
         filterText={filterText}
         showStockedOnly={showStockedOnly}
-        onFilterTextChange={setFilterText}
-        onShowStockedOnlyChange={setShowStockedOnly}
+        setFilterText={setFilterText}
+        setShowStockedOnly={setShowStockedOnly}
       />
       <br />
       <ProductTable
